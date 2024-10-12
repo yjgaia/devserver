@@ -1,7 +1,5 @@
-# SimpleWebServer
+# devserver
 긴급히 웹 서버가 필요할 때 유-용!
-
-파일 하나, 85줄짜리 node.js 기반 코드입니다.
 
 ## 제공하는 기능
 * root 경로로 접근 시 index.html 제공
@@ -18,16 +16,16 @@ var PORT = 8413;
 
 ## 실행
 ```
-node SimpleWebServer.js
+node run.js
 ```
 
 ## NPM으로 설치 및 실행
 [NPM](https://www.npmjs.com)으로도 설치 및 실행할 수 있습니다. 단, 이 경우 포트를 변경할 수 없고 기본 포트인 8413 포트를 사용해야 합니다.
 ```
-npm install swserver -g
+npm install @yjgaia/devserver -g
 ```
 ```
-swserver
+devserver
 ```
 
 ## 라이센스

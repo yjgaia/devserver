@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-require('./SimpleWebServer.js');
+import "./run.js";
 
