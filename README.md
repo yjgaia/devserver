@@ -7,11 +7,12 @@
 * 500, 404 오류 화면 제공
 
 ## 설정
-맨 윗줄의 PORT를 수정해서 쓰시면 됩니다.
+`run.js`의 webServerPort를 수정해서 쓰시면 됩니다.
 ```javascript
-var PORT = 8413;
-
-...
+import run from "./dist/run.js";
+run({
+  webServerPort: 8413,
+});
 ```
 
 ## 실행
