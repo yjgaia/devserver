@@ -1,6 +1,6 @@
 import {
   content_types,
-  FileUtil,
+  FileUtils,
   HttpContext,
   WebServer,
   WebServerOptions,
@@ -56,13 +56,13 @@ export default class FileServer extends WebServer {
   private async responseResource(context: HttpContext) {
     try {
       const contentType = FileServer.contentTypeFromPath(context.uri);
-      const content = await FileUtil.readBuffer(
+      const content = await FileUtils.readBuffer(
         `${this.publicFolderPath}/${context.uri}`,
       );
       await context.response({ content, contentType });
     } catch (error) {
       try {
-        const indexFileContent = await FileUtil.readText(
+        const indexFileContent = await FileUtils.readText(
           `${this.publicFolderPath}/index-dev.html`,
         );
         await context.response({
@@ -71,7 +71,7 @@ export default class FileServer extends WebServer {
         });
       } catch (error) {
         try {
-          const indexFileContent = await FileUtil.readText(
+          const indexFileContent = await FileUtils.readText(
             `${this.publicFolderPath}/index.html`,
           );
           await context.response({
