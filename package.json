@@ -1,13 +1,13 @@
 {
   "name": "@yjgaia/devserver",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "main": "run.js",
   "bin": {
     "devserver": "./program.js"
   },
   "dependencies": {
-    "@common-module/server": "^0.1.6",
+    "@common-module/server": "^0.1.7",
     "commander": "^12.1.0"
   },
   "devDependencies": {
